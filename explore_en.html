@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Counterfactual Recipe Generation</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet">
+    <!-- Favicons -->
+  </head>
+  <body class="vh-100">
+    <nav id="navbar" class="shadow-sm navbar navbar-light bg-light" role="navigation">
+      <div id="navbar-content" class="container">
+        <a class="navbar-brand" href="#">Counterfactual Recipe Generation</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="./index.html" class="nav-link" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link active">Explore</a></li>
+          <li class="nav-item"><a href="./explore_zh.html" class="nav-link" aria-current="page">En &#10132; Zh</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="main" class="container">
+      <div class="row flex-nowrap">
+        <div class="col-5 border-end">
+        
+          <div id="filter-cell" class="row">
+            <h3 class="pt-4">Select a dish pair:</h3>
+            <div class="row px-4">
+              <div class="list-group col-12 p-1">
+                <label class="list-group-item list-group-item-primary">
+                  <input class="form-check-input me-1" type="radio" name="dish_filter" value="steam">Steamed Turbot &rarr; Steamed Hairy Crab</input>
+                </label>
+                <label class="list-group-item list-group-item-primary">
+                  <input class="form-check-input me-1" type="radio" name="dish_filter" value="spicy">Spicy Stir-fried Squid &rarr; Spicy Stir-fried Snails</input>
+                </label>
+                <label class="list-group-item list-group-item-primary">
+                  <input class="form-check-input me-1" type="radio" name="dish_filter" value="kungpao">Kung Pao Chicken &rarr; Kung Pao Shrimp Balls</input>
+                </label>
+                <label class="list-group-item list-group-item-primary">
+                  <input class="form-check-input me-1" type="radio" name="dish_filter" value="cold">Cold Tofu &rarr; Cold Tofu with Century Egg</input>
+                </label>
+                <label class="list-group-item list-group-item-primary">
+                  <input class="form-check-input me-1" type="radio" name="dish_filter" value="smother">Smothered Chicken &rarr; Smothered Chicken with Abalone</input>
+                </label>
+              </div>
+              <hr class="mt-4" />
+            </div>
+          </div>
+
+          <div id="model-list-cell" class="row">
+            <h3 class="pt-2">Select a generation model:</h3>
+            <div class="row px-4">
+              <div class="list-group col-6 p-1">
+                <label class="list-group-item list-group-item-secondary">
+                  <input class="form-check-input me-1" type="radio" name="model_filter" value="Human Expert">Human Expert</input>
+                </label>
+                <label class="list-group-item list-group-item-secondary">
+                  <input class="form-check-input me-1" type="radio" name="model_filter" value="GPT-2 (D)">GPT-2 (D)</input>
+                </label>
+                <label class="list-group-item list-group-item-secondary">
+                  <input class="form-check-input me-1" type="radio" name="model_filter" value="GPT-2 (D+R)">GPT-2 (D+R)</input>
+                </label>
+                <label class="list-group-item list-group-item-secondary">
+                  <input class="form-check-input me-1" type="radio" name="model_filter" value="EduCat">EduCat</input>
+                </label>
+                <label class="list-group-item list-group-item-secondary">
+                  <input class="form-check-input me-1" type="radio" name="model_filter" value="Delorean">Delorean</input>
+                </label>
+
+              </div>
+
+              <div class="py-4">
+                <p>
+                The English text is translated from Chinese.
+                </p>
+              </div>
+
+            </div>
+          </div>
+          
+        </div>
+        <div id="text-display" class="col-7 py-4">
+          <div id="base-recipe-display" class="d-none">
+            <div class="alert alert-info">
+              <h4>Base Recipe of <strong><span id="base-dish"></strong></h4>
+            </div>
+            <p id="base-recipe-text">This is an example base recipe</p>
+          </div>
+          <div id="target-recipe-display" class="d-none">
+            <div class="alert alert-danger">
+              <h4>Generated Recipe of <strong><span id="target-dish"></span></strong> by <strong><span id="model-display"></span></strong></h4>
+            </div>
+            <p id="target-recipe-text">This is an example target recipe</p>
+          </div>
+        </div>
+
+
+      </div>
+      
+    </main>
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./src/explorer_en.js"></script>
+  </body>
+</html>
+
+
