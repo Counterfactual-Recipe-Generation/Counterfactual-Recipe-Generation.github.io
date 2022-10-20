@@ -26,10 +26,6 @@
   overflow: auto;
 }
 
-#leaderboard {
-  overflow-y: auto;
-}
-
 #model-list-cell {
   overflow-y: auto;
 }
@@ -37,4 +33,3 @@
 #text-display {
   overflow-y: auto;
 }
-

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>反事实菜谱生成</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet">
+    <!-- Favicons -->
+  </head>
+  <body>
+    <nav id="navbar" class="shadow-sm navbar navbar-light bg-light">
+      <div id="navbar-content" class="container">
+        <a class="navbar-brand" href="#">反事实菜谱生成</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">主页</a></li>
+          <li class="nav-item"><a href="./dataset_zh.html" class="nav-link">数据集</a></li>
+          <li class="nav-item"><a href="./explore_zh.html" class="nav-link">任务</a></li>
+          <li class="nav-item"><a href="./index_en.html" class="nav-link" aria-current="page">中文 &#10132; 英文</a></li>
+        
+        </ul>
+      </div>
+    </nav>
+    <main id="main" class="container fs-5">
+      <div class="p-5">
+        <h1 class="text-center display-5 fw-bold">Counterfactual Recipe Generation: <br />Exploring Models’ Compositional Generalization Ability in a Realistic Scenario</h1>
+      </div>
+      <div class="pt-3">
+        <div class="row">
+          <div class="col-6">
+            <h2 class="display-6 fw-bold">简介</h2>
+            <p>为了研究预训练语言模型在现实场景中是否具有组合泛化能力，我们设计了<b>反事实菜谱生成</b>任务。这个任务要求模型根据原料的变化对菜谱进行修改。 </p>
+            <p>这个任务要求模型具有两个层次的组合能力：将新原料与原有菜谱进行组合，以及考虑原料变动带来的动作变动。</p>
+            <p>我们的结果表明，预训练语言模型很难在保留原有菜谱风格的情况下修改原料，并且经常忽略需要调整的动作。虽然预训练语言模型可以生成流畅的菜谱文本，但它们离真正学习和使用烹饪知识还有距离。</p>
+            <div>
+              <a class="btn btn-primary btn-lg" type="button" href="https://github.com/xxxiaol/counterfactual-recipe-generation" target="_blank">阅读论文</a>
+              <a class="btn btn-success btn-lg" type="button" href="https://github.com/xxxiaol/counterfactual-recipe-generation" target="_blank">查看代码</a>
+            </div>
+          </div>
+          <div class="col-6">
+            <img id="intro_fig" src="src/task_en.jpg" alt="intro figure">
+          </div>
+        </div>
+
+      </div>
+      <div class="pt-5">
+        <h2 class="display-6 fw-bold">引用</h2>
+        <p>如果我们的工作给您带来了帮助，请引用：</p>
+        <pre class="citations border bg-light p-2 fs-6">
+          To be added
+        </pre>
+      </div>
+      <div class="pt-4">
+        <h2 class="display-6 fw-bold">联系方式</h2>
+        <p>
+        如果您对我们的工作有疑问，请联系刘潇（lxlisa@pku.edu.cn）或创建<a href="https://github.com/xxxiaol/counterfactual-recipe-generation">github issue</a>。 我们非常感谢由<a href="https://www.cs.utexas.edu/~mjqzhang/">Micheal Zhang</a>制作的网页布局代码。
+        </p>
+      </div>
+      <div class="pt-4">
+        <h2 class="display-6 fw-bold">致谢</h2>
+        <p>
+        我们衷心感谢标注者的认真工作，特别是韩玉晶，戴永宁，张猛，柏艳红，鞠莉，李思莹和冯洁。
+        </p>
+      </div>
+    </main>
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
